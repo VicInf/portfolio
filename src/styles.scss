@@ -48,7 +48,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Ambient water layer */
+/* Ambient water layer — static gradients, zero perpetual compositing */
 body::before {
   content: "";
   position: fixed;
@@ -57,28 +57,18 @@ body::before {
   filter: blur(60px);
   pointer-events: none;
   z-index: -2;
-  animation: water-flow 80s ease-in-out infinite;
   transform: translate3d(0, 0, 0);
-  will-change: transform;
 }
 
-@keyframes water-flow {
-  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  25% { transform: translate3d(-2%, 1.5%, 0) scale(1.03); }
-  50% { transform: translate3d(1.5%, -2%, 0) scale(1.02); }
-  75% { transform: translate3d(-1%, 0.8%, 0) scale(1.035); }
-}
-
-/* Static scanlines — texture without perpetual repaint */
+/* Static scanlines — alpha-only texture: no blend, no per-frame full-screen cost */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 3px);
+  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0px, rgba(255, 255, 255, 0.014) 1px, transparent 1px, transparent 3px);
   pointer-events: none;
   z-index: 1000;
-  mix-blend-mode: overlay;
-  opacity: 0.12;
+  opacity: 0.18;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1.05; font-weight: 600; letter-spacing: 0.01em; }
@@ -103,14 +93,17 @@ section { padding: clamp(var(--space-12), 12vw, var(--space-20)) clamp(var(--spa
 
 /* ---- Button primitive (shared by HERO and CONTACT) ---- */
 
-.menu-btn { position: relative; display: inline-flex; align-items: center; padding: var(--space-3) var(--space-6); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: linear-gradient(90deg, rgba(77, 123, 255, 0.25) 0%, rgba(77, 123, 255, 0.1) 100%); border: 1px solid rgba(77, 123, 255, 0.5); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), border-color 160ms var(--ease-out), background-color 160ms var(--ease-out), color 160ms var(--ease-out); }
+.menu-btn { position: relative; display: inline-flex; align-items: center; padding: var(--space-3) var(--space-6); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; background: linear-gradient(90deg, rgba(77, 123, 255, 0.25) 0%, rgba(77, 123, 255, 0.1) 100%); border: 1px solid rgba(77, 123, 255, 0.5); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); transition: transform 160ms var(--ease-out), border-color 160ms var(--ease-out), background-color 160ms var(--ease-out), color 160ms var(--ease-out); }
+/* CTA hover glow: pre-rendered on a layer, composited via opacity — no repaint */
+.menu-btn::before { content: ""; position: absolute; inset: 0; box-shadow: 0 0 24px var(--glow-blue); opacity: 0; transition: opacity 160ms var(--ease-out); }
 .menu-btn::after { content: "▶"; position: absolute; left: var(--space-2); font-size: 0.5rem; color: var(--accent-cyan-pure); opacity: 0; transform: translateX(-4px); transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .menu-btn span { position: relative; z-index: 1; }
-.menu-btn:hover { transform: translateX(4px); border-color: var(--accent-cyan); box-shadow: 0 0 24px var(--glow-blue); }
+.menu-btn:hover { transform: translateX(4px); border-color: var(--accent-cyan); }
+.menu-btn:hover::before { opacity: 1; }
 .menu-btn:hover::after { opacity: 1; transform: translateX(0); }
 .menu-btn:active { transform: translateX(4px) scale(0.97); }
 .menu-btn.secondary { background: transparent; }
-.menu-btn.secondary:hover { box-shadow: none; }
+.menu-btn.secondary::before { display: none; }
 
 /* ---- Tag chip primitive (shared by project cards and skills) ---- */
 

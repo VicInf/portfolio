@@ -1,6 +1,6 @@
 :host { display: block; }
 
-header { position: fixed; top: 0; left: 0; right: 0; z-index: 30; background: linear-gradient(180deg, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 100%); backdrop-filter: blur(10px) saturate(1.2); border-bottom: 1px solid var(--border); animation: header-slide 400ms var(--ease-out); }
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 30; background: linear-gradient(180deg, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 100%); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); animation: header-slide 400ms var(--ease-out); }
 
 @keyframes header-slide { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
