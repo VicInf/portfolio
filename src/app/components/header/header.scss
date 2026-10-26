@@ -1,6 +1,8 @@
 :host { display: block; }
 
-header { position: fixed; top: 0; left: 0; right: 0; z-index: 30; background: linear-gradient(180deg, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 100%); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); animation: header-slide 400ms var(--ease-out); }
+/* Sticky (in-flow) — the header's own height is always honored by the page
+   flow; no magic padding-top offsets to drift out of sync on any width. */
+header { position: sticky; top: 0; z-index: 30; background: linear-gradient(180deg, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 100%); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); animation: header-slide 400ms var(--ease-out); }
 
 @keyframes header-slide { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
@@ -26,15 +28,17 @@ nav { max-width: 1400px; margin: 0 auto; padding: var(--space-2) clamp(var(--spa
 .lang-btn:hover { color: var(--text); }
 .lang-btn.active { color: var(--accent-cyan); border-color: rgba(78, 240, 240, 0.4); }
 
-/* Mobile: single compact row that actually fits a 360px screen.
-   Header stays ≤ ~52px tall so `main`'s 56px offset keeps holding. */
+/* Mobile: honest two rows — logo + languages share row 1, nav links get a
+   full centered row 2. Nothing wraps, nothing clips at any width. No
+   backdrop-filter (real-time filter costs scroll frames on low-end GPUs). */
 @media (max-width: 768px) {
-  nav { padding-top: var(--space-2); padding-bottom: var(--space-2); gap: var(--space-2); }
-  .logo { font-size: 0.75rem; gap: var(--space-1); }
-  .logo::before { display: none; }
-  .nav-right { gap: var(--space-2); margin-left: auto; }
-  .nav-links { gap: var(--space-1); }
-  .nav-link { padding: var(--space-1) var(--space-1); letter-spacing: 0.08em; }
-  .lang-switch { gap: 0; }
-  .lang-btn { font-size: 0.9375rem; padding: 1px 3px; }
+  header { backdrop-filter: none; background: rgba(5, 5, 16, 0.96); }
+
+  nav { flex-wrap: wrap; row-gap: 0; padding-top: var(--space-2); padding-bottom: var(--space-1); }
+  .nav-right { display: contents; }
+  .lang-switch { order: 2; margin-left: auto; gap: 0; }
+  .nav-links { order: 3; width: 100%; justify-content: center; gap: var(--space-4); }
+  .logo { font-size: 0.75rem; }
+  .nav-link { letter-spacing: 0.1em; }
+  .lang-btn { font-size: 0.9375rem; padding: 1px 4px; }
 }

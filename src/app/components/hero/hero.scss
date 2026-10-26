@@ -1,6 +1,12 @@
 :host { display: block; }
 
-.hero { min-height: calc(100dvh - 56px); display: flex; flex-direction: column; justify-content: center; position: relative; }
+.hero { min-height: calc(100dvh - 44px); display: flex; flex-direction: column; justify-content: center; position: relative; }
+
+/* Mobile: let hero size to its content — the sticky header's real height is
+   already honored by the flow, no fixed-header offset math applies. */
+@media (max-width: 768px) {
+  .hero { min-height: auto; padding-top: var(--space-9); padding-bottom: var(--space-9); }
+}
 .hero::before { content: ""; position: absolute; top: 10%; right: -20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(77, 123, 255, 0.08) 0%, transparent 60%); pointer-events: none; animation: float 10s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(-30px, 20px) scale(1.05); } 66% { transform: translate(20px, -30px) scale(0.95); } }
 

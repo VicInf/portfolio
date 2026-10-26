@@ -33,7 +33,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   margin: 0;
@@ -45,7 +45,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a { -webkit-tap-highlight-color: transparent; }
@@ -83,7 +83,7 @@ button { font-family: inherit; }
 
 /* ---- Layout primitives ---- */
 
-main { display: flex; flex-direction: column; padding-top: 56px; }
+main { display: flex; flex-direction: column; }
 
 section { padding: clamp(var(--space-12), 12vw, var(--space-20)) clamp(var(--space-4), 8vw, var(--space-12)); max-width: 1400px; margin: 0 auto; width: 100%; }
 
@@ -122,6 +122,16 @@ section { padding: clamp(var(--space-12), 12vw, var(--space-20)) clamp(var(--spa
     animation-range: entry 0% entry 55%;
   }
   @keyframes reveal { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Android/low-end struggle zone — reveals are static on phones, motion stays on desktop */
+  @media (max-width: 768px) {
+    .section-header, .project-card, .about-panel, .contact-panel { animation: none; }
+  }
+}
+
+/* Low-end mobile: drop the giant fixed blurred layer — the body gradient carries the ambience */
+@media (max-width: 768px) {
+  body::before { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
