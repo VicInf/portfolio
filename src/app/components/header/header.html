@@ -1,11 +1,12 @@
-<header>
+<header [class.open]="open()">
   <nav>
     <a href="#hero" class="logo">VICENTE PÉREZ</a>
-    <div class="nav-right">
+
+    <div class="menu-panel" id="site-menu">
       <div class="nav-links">
-        <a href="#work" class="nav-link">{{ i18n.t('navWork') }}</a>
-        <a href="#about" class="nav-link">{{ i18n.t('navAbout') }}</a>
-        <a href="#contact" class="nav-link">{{ i18n.t('navContact') }}</a>
+        <a href="#work" class="nav-link" (click)="close()">{{ i18n.t('navWork') }}</a>
+        <a href="#about" class="nav-link" (click)="close()">{{ i18n.t('navAbout') }}</a>
+        <a href="#contact" class="nav-link" (click)="close()">{{ i18n.t('navContact') }}</a>
       </div>
       <div class="lang-switch" role="group" aria-label="Language">
         @for (l of i18n.langs; track l) {
@@ -13,5 +14,9 @@
         }
       </div>
     </div>
+
+    <button type="button" class="nav-toggle" (click)="toggle()" [attr.aria-expanded]="open()" aria-controls="site-menu" [attr.aria-label]="i18n.t('navToggle')">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
   </nav>
 </header>

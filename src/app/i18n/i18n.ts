@@ -14,6 +14,7 @@ const D = {
   navWork: { en: 'WORK', es: 'TRABAJOS', fr: 'PROJETS' },
   navAbout: { en: 'ABOUT', es: 'PERFIL', fr: 'PROFIL' },
   navContact: { en: 'CONTACT', es: 'CONTACTO', fr: 'CONTACT' },
+  navToggle: { en: 'Toggle menu', es: 'Abrir/cerrar menú', fr: 'Ouvrir/fermer le menu' },
 
   eyebrow: {
     en: 'FULL-STACK DEVELOPER',
