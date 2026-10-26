@@ -5,7 +5,7 @@
 /* Project cards — the row stays put; the index line and title do the talking.
    Cards sit in a 2-column grid on desktop; internal layout uses grid areas so
    tags wrap under the title when a card is half-width. */
-.project-card { position: relative; display: grid; grid-template-columns: auto 1fr auto auto; grid-template-areas: "number info link" "number tags link"; gap: var(--space-2) var(--space-6); align-items: center; padding: var(--space-5) var(--space-6); background: linear-gradient(90deg, rgba(16, 16, 37, 0.85) 0%, rgba(10, 10, 26, 0.7) 100%); border: 1px solid var(--border); border-left: 2px solid rgba(78, 240, 240, 0.35); transition: border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+.project-card { position: relative; display: grid; grid-template-columns: auto 1fr auto auto; grid-template-areas: "number info link" "number tags link"; gap: var(--space-2) var(--space-6); align-items: center; padding: var(--space-5) var(--space-6); background: linear-gradient(90deg, rgba(16, 16, 37, 0.85) 0%, rgba(10, 10, 26, 0.7) 100%); border: 1px solid var(--border); border-left: 2px solid rgba(78, 240, 240, 0.35); transition: border-color 200ms var(--ease-out); }
 .project-card:hover { border-left-color: var(--accent-cyan-pure); border-color: rgba(77, 123, 255, 0.45); }
 .project-card:active { transform: scale(0.995); }
 .project-number { grid-area: number; font-family: "VT323", monospace; font-size: 1.75rem; color: var(--accent-cyan); position: relative; z-index: 1; line-height: 1; }
