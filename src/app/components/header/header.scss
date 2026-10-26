@@ -11,6 +11,8 @@ nav { max-width: 1400px; margin: 0 auto; padding: var(--space-3) clamp(var(--spa
 .logo:hover { color: var(--accent-cyan); }
 .logo:active { transform: scale(0.97); }
 
+.nav-right { display: flex; align-items: center; gap: var(--space-5); }
+
 .nav-links { display: flex; gap: var(--space-6); align-items: center; }
 .nav-link { position: relative; display: inline-block; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; padding: var(--space-2) var(--space-3); color: var(--text-secondary); transition: color 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .nav-link::after { content: ""; position: absolute; left: var(--space-3); right: var(--space-3); bottom: 0; height: 1px; background: var(--accent-cyan); transform: scaleX(0); transform-origin: left; transition: transform 160ms var(--ease-out); }
@@ -20,4 +22,11 @@ nav { max-width: 1400px; margin: 0 auto; padding: var(--space-3) clamp(var(--spa
 
 @media (max-width: 768px) {
   .nav-links { gap: var(--space-4); }
+  .nav-right { gap: var(--space-3); }
 }
+
+/* Language switcher — tiny, terminal-flavored, out of the way */
+.lang-switch { display: flex; gap: 2px; }
+.lang-btn { background: transparent; border: 1px solid transparent; color: var(--text-secondary); font-family: "VT323", monospace; font-size: 1rem; line-height: 1.1; padding: 2px 6px; cursor: pointer; transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out); }
+.lang-btn:hover { color: var(--text); }
+.lang-btn.active { color: var(--accent-cyan); border-color: rgba(78, 240, 240, 0.4); }

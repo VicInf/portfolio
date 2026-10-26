@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { I18n } from '../../i18n/i18n';
 
 @Component({
   selector: 'app-hero',
@@ -7,9 +8,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Hero {
+  protected readonly i18n = inject(I18n);
+
   protected readonly stats = [
-    { label: 'CLASS', value: 'FLUTTER + ANGULAR' },
-    { label: 'LEVEL', value: 'SENIOR' },
-    { label: 'EXP', value: '3+ YRS' },
-  ];
+    { key: 'statClass', valueKey: 'statClassVal' },
+    { key: 'statLevel', valueKey: 'statLevelVal' },
+    { key: 'statExp', valueKey: 'statExpVal' },
+  ] as const;
 }

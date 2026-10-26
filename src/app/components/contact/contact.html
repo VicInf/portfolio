@@ -1,12 +1,12 @@
 <section id="contact">
   <div class="section-header">
-    <h2 class="section-title">COMMUNICATION CHANNEL</h2>
+    <h2 class="section-title">{{ i18n.t('contactTitle') }}</h2>
   </div>
   <div class="contact-panel">
-    <p class="contact-text">Open to new opportunities — reach out through any channel.</p>
+    <p class="contact-text">{{ i18n.t('contactText') }}</p>
     <div class="contact-links">
-      @for (channel of channels; track channel.label) {
-        <a [href]="channel.href" class="menu-btn" [class.secondary]="channel.secondary"><span>{{ channel.label }}</span></a>
+      @for (channel of channels; track channel.key) {
+        <a [href]="channel.href" class="menu-btn" [class.secondary]="channel.secondary"><span>{{ i18n.t(channel.key) }}</span></a>
       }
     </div>
   </div>

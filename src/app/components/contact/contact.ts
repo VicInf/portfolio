@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { I18n } from '../../i18n/i18n';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Contact {
+  protected readonly i18n = inject(I18n);
+
   protected readonly channels = [
-    { label: 'TRANSMIT EMAIL', href: 'mailto:vicenteapv1@gmail.com', secondary: false },
-    { label: 'LINKEDIN', href: 'https://www.linkedin.com/in/vicinf', secondary: true },
-    { label: 'GITHUB', href: 'https://github.com/VicInf', secondary: true },
-  ];
+    { key: 'ctaEmail', href: 'mailto:vicenteapv1@gmail.com', secondary: false },
+    { key: 'ctaLinkedin', href: 'https://www.linkedin.com/in/vicinf', secondary: true },
+    { key: 'ctaGithub', href: 'https://github.com/VicInf', secondary: true },
+  ] as const;
 }

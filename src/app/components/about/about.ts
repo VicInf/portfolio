@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { I18n } from '../../i18n/i18n';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class About {
+  protected readonly i18n = inject(I18n);
+
+  /** EN source strings — display name resolved per language via i18n.txSkill(). */
   protected readonly skills = [
     'Frontend development',
     'Flutter',

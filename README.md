@@ -11,6 +11,8 @@ Gamified, Persona 3 Reload–inspired personal portfolio built with Angular 22. 
 - **Motion with restraint** — scroll-driven reveals via `animation-timeline: view()` (static fallback for unsupported browsers), `prefers-reduced-motion` respected, static scanlines, no perpetual repaint loops.
 - **Tag chip primitive** — the same chip language covers project tags and the skills panel.
 
+- **Trilingual (EN / ES / FR)** — runtime signal-based i18n with a header switcher; choice persisted in `localStorage`, `<html lang>` and page title update on switch. All copy (including project descriptions) lives per-language in `src/app/i18n/i18n.ts` and `src/app/data/projects.ts`.
+
 ## Development
 
 ```bash

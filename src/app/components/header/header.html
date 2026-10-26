@@ -1,10 +1,17 @@
 <header>
   <nav>
     <a href="#hero" class="logo">VICENTE PÉREZ</a>
-    <div class="nav-links">
-      <a href="#work" class="nav-link">WORK</a>
-      <a href="#about" class="nav-link">ABOUT</a>
-      <a href="#contact" class="nav-link">CONTACT</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#work" class="nav-link">{{ i18n.t('navWork') }}</a>
+        <a href="#about" class="nav-link">{{ i18n.t('navAbout') }}</a>
+        <a href="#contact" class="nav-link">{{ i18n.t('navContact') }}</a>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        @for (l of i18n.langs; track l) {
+          <button type="button" class="lang-btn" [class.active]="i18n.lang() === l" (click)="i18n.set(l)">{{ l.toUpperCase() }}</button>
+        }
+      </div>
     </div>
   </nav>
 </header>

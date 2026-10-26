@@ -1,6 +1,6 @@
 <section id="work">
   <div class="section-header">
-    <h2 class="section-title">COMPLETED MISSIONS</h2>
+    <h2 class="section-title">{{ i18n.t('workTitle') }}</h2>
   </div>
 
   <div class="projects-grid">
@@ -10,12 +10,12 @@
 
         <div class="project-info">
           <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-desc">{{ project.description }}</p>
+          <p class="project-desc">{{ project.description[i18n.lang()] }}</p>
         </div>
 
         <div class="project-tags">
           @for (tag of project.tags; track tag) {
-            <span class="project-tag">{{ tag }}</span>
+            <span class="project-tag">{{ i18n.tx(tag) }}</span>
           }
         </div>
 
@@ -23,7 +23,7 @@
           <div class="project-links">
             @if (hasMenu(project)) {
               <details class="play-details">
-                <summary class="project-link" aria-label="View apps on Google Play">
+                <summary class="project-link" [attr.aria-label]="i18n.t('menuAria')">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -37,7 +37,7 @@
                 </div>
               </details>
             } @else {
-              <a [href]="links[0].href" target="_blank" rel="noopener noreferrer" class="project-link" [attr.aria-label]="links[0].label">
+              <a [href]="links[0].href" target="_blank" rel="noopener noreferrer" class="project-link" [attr.aria-label]="i18n.tx(links[0].label)">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>

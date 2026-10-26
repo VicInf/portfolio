@@ -1,23 +1,19 @@
 <section id="hero" class="hero">
   <div class="hero-content">
-    <span class="eyebrow">FULL-STACK DEVELOPER</span>
-    <h1>CODE OPERATOR<br />ONLINE</h1>
-    <p class="hero-subtitle">
-      Specialized in crafting high-performance interfaces with precision timing.
-      Every interaction calculated. Every pixel deliberate.
-      Now building the systems behind them.
-    </p>
+    <span class="eyebrow">{{ i18n.t('eyebrow') }}</span>
+    <h1>{{ i18n.t('h1a') }}<br />{{ i18n.t('h1b') }}</h1>
+    <p class="hero-subtitle">{{ i18n.t('subtitle') }}</p>
     <div class="hero-stats">
-      @for (stat of stats; track stat.label) {
+      @for (stat of stats; track stat.key) {
         <div class="stat">
-          <span class="stat-label">{{ stat.label }}</span>
-          <span class="stat-value">{{ stat.value }}</span>
+          <span class="stat-label">{{ i18n.t(stat.key) }}</span>
+          <span class="stat-value">{{ i18n.t(stat.valueKey) }}</span>
         </div>
       }
     </div>
     <div class="hero-actions">
-      <a href="#work" class="menu-btn"><span>EXECUTE MISSION</span></a>
-      <a href="#contact" class="menu-btn secondary"><span>LOAD DATA</span></a>
+      <a href="#work" class="menu-btn"><span>{{ i18n.t('ctaPrimary') }}</span></a>
+      <a href="#contact" class="menu-btn secondary"><span>{{ i18n.t('ctaSecondary') }}</span></a>
     </div>
   </div>
 </section>
