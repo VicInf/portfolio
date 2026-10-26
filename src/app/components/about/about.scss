@@ -1,0 +1,9 @@
+:host { display: block; }
+
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: var(--space-4); }
+
+/* Equal panels get equal treatment — one style for both */
+.about-panel { padding: var(--space-6); background: linear-gradient(135deg, rgba(16, 16, 37, 0.85) 0%, rgba(10, 10, 26, 0.7) 100%); border: 1px solid var(--border); border-left: 2px solid rgba(78, 240, 240, 0.35); display: flex; flex-direction: column; gap: var(--space-4); }
+.panel-title { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-cyan); }
+.panel-text { color: var(--text-soft); line-height: 1.7; font-size: 1rem; }
+.skill-list { display: flex; flex-wrap: wrap; gap: var(--space-2); }

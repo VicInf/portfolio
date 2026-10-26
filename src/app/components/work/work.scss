@@ -1,0 +1,38 @@
+:host { display: block; }
+
+.projects-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+
+/* Project cards — the row stays put; the index line and title do the talking.
+   Cards sit in a 2-column grid on desktop; internal layout uses grid areas so
+   tags wrap under the title when a card is half-width. */
+.project-card { position: relative; display: grid; grid-template-columns: auto 1fr auto auto; grid-template-areas: "number info link" "number tags link"; gap: var(--space-2) var(--space-6); align-items: center; padding: var(--space-5) var(--space-6); background: linear-gradient(90deg, rgba(16, 16, 37, 0.85) 0%, rgba(10, 10, 26, 0.7) 100%); border: 1px solid var(--border); border-left: 2px solid rgba(78, 240, 240, 0.35); transition: border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+.project-card:hover { border-left-color: var(--accent-cyan-pure); border-color: rgba(77, 123, 255, 0.45); }
+.project-card:active { transform: scale(0.995); }
+.project-number { grid-area: number; font-family: "VT323", monospace; font-size: 1.75rem; color: var(--accent-cyan); position: relative; z-index: 1; line-height: 1; }
+.project-info { grid-area: info; display: flex; flex-direction: column; gap: var(--space-1); position: relative; z-index: 1; }
+.project-title { font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.project-desc { color: var(--text-secondary); font-size: 0.9375rem; }
+.project-tags { grid-area: tags; display: flex; gap: var(--space-2); flex-wrap: wrap; position: relative; z-index: 1; padding-right: var(--space-2); }
+
+.project-links { grid-area: link; display: flex; gap: var(--space-2); align-items: center; position: relative; z-index: 1; }
+.project-link { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid rgba(255, 255, 255, 0.2); color: var(--text-secondary); clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px)); transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+
+/* Play-store choice menu — one control, labeled destinations */
+.play-details { position: relative; }
+.play-details[open] summary { color: var(--accent-cyan); border-color: var(--accent-cyan); }
+.play-details summary { list-style: none; cursor: pointer; }
+.play-details summary::-webkit-details-marker { display: none; }
+.play-menu { position: absolute; top: calc(100% + var(--space-2)); right: 0; min-width: 11rem; display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-2); background: var(--bg-elev); border: 1px solid var(--accent-cyan); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); box-shadow: 0 8px 30px rgba(5, 5, 16, 0.6); z-index: 2; opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.play-details[open] .play-menu { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.play-menu a { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) var(--space-3); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); transition: color 160ms var(--ease-out), background-color 160ms var(--ease-out); }
+.play-menu a span { font-size: 0.5rem; color: var(--accent-cyan); }
+.play-menu a:hover { color: var(--text); background: rgba(77, 123, 255, 0.15); }
+
+@media (min-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+}
+
+@media (max-width: 768px) {
+  .project-card { display: flex; flex-direction: column; gap: var(--space-3); }
+  .project-links { align-self: flex-start; }
+}

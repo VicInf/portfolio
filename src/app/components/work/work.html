@@ -1,0 +1,51 @@
+<section id="work">
+  <div class="section-header">
+    <h2 class="section-title">COMPLETED MISSIONS</h2>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.id) {
+      <article class="project-card">
+        <span class="project-number">{{ project.id }}</span>
+
+        <div class="project-info">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+        </div>
+
+        <div class="project-tags">
+          @for (tag of project.tags; track tag) {
+            <span class="project-tag">{{ tag }}</span>
+          }
+        </div>
+
+        @if (project.links; as links) {
+          <div class="project-links">
+            @if (hasMenu(project)) {
+              <details class="play-details">
+                <summary class="project-link" aria-label="View apps on Google Play">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </summary>
+                <div class="play-menu">
+                  @for (link of links; track link.href) {
+                    <a [href]="link.href" target="_blank" rel="noopener noreferrer">
+                      {{ link.label }} <span>▸</span>
+                    </a>
+                  }
+                </div>
+              </details>
+            } @else {
+              <a [href]="links[0].href" target="_blank" rel="noopener noreferrer" class="project-link" [attr.aria-label]="links[0].label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            }
+          </div>
+        }
+      </article>
+    }
+  </div>
+</section>

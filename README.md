@@ -1,59 +1,38 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3.
+Gamified, Persona 3 Reload–inspired personal portfolio built with Angular 22. Single-page, scroll-driven reveals, zero runtime dependencies beyond the framework.
 
-## Development server
+**Live site:** https://vicinf.github.io/portfolio/
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
-```
+- **Section components** — header, hero, work, about, contact and footer are standalone components with `OnPush` change detection.
+- **Data-driven cards** — projects live in `src/app/data/projects.ts`; adding one is a single typed object and the grid renumbers and re-links itself (single link, or dropdown menu for multi-store projects like Sidney).
+- **Motion with restraint** — scroll-driven reveals via `animation-timeline: view()` (static fallback for unsupported browsers), `prefers-reduced-motion` respected, static scanlines, no perpetual repaint loops.
+- **Tag chip primitive** — the same chip language covers project tags and the skills panel.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Development
 
 ```bash
-ng generate component component-name
+pnpm install
+pnpm start          # dev server at http://localhost:4200
+pnpm build          # production build in dist/portfolio
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Structure
 
-```bash
-ng generate --help
+```
+src/app/
+├── app.ts / app.html / app.scss   # composition root
+├── data/projects.ts               # Project model + portfolio data
+└── components/
+    ├── header/  ├── hero/  ├── work/  ├── about/  ├── contact/  └── footer/
 ```
 
-## Building
+## Stack
 
-To build the project run:
+Angular 22 · TypeScript · SCSS · Google Fonts (Press Start 2P, VT323)
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+© 2026 Vicente Pérez

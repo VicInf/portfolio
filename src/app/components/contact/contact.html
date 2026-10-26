@@ -1,0 +1,13 @@
+<section id="contact">
+  <div class="section-header">
+    <h2 class="section-title">COMMUNICATION CHANNEL</h2>
+  </div>
+  <div class="contact-panel">
+    <p class="contact-text">Open to new opportunities — reach out through any channel.</p>
+    <div class="contact-links">
+      @for (channel of channels; track channel.label) {
+        <a [href]="channel.href" class="menu-btn" [class.secondary]="channel.secondary"><span>{{ channel.label }}</span></a>
+      }
+    </div>
+  </div>
+</section>
