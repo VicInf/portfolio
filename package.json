@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "cv:build": "scripts/cv-build.sh"
   },
   "private": true,
   "packageManager": "pnpm@11.9.0",
