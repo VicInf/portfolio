@@ -20,7 +20,7 @@ describe('I18n', () => {
     expect(document.title).toBe('Vicente Pérez — Líder Full-Stack');
 
     service.set('fr');
-    expect(service.t('subtitle')).toContain('e-learning');
+    expect(service.t('subtitle')).toContain('sous-traitant au service de Chevron');
   });
 
   it('persists the chosen language to storage', () => {
