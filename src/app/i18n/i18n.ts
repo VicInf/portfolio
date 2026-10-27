@@ -56,9 +56,9 @@ const D = {
 
   contactTitle: { en: 'COMMUNICATION CHANNEL', es: 'CANAL DE COMUNICACIÓN', fr: 'CANAL DE COMMUNICATION' },
   contactText: {
-    en: 'Open to new opportunities — reach out through any channel.',
-    es: 'Abierto a nuevas oportunidades — escríbeme por cualquier canal.',
-    fr: "Ouvert à de nouvelles opportunités — contactez-moi par n'importe quel canal.",
+    en: 'Open to remote roles — USD contractor, full US timezone overlap. Reach out through any channel.',
+    es: 'Abierto a roles remotos — contratista en USD, huso horario EE.UU. completo. Escríbeme por cualquier canal.',
+    fr: "Ouvert aux rôles à distance — freelance en USD, fuseau horaire des États-Unis. Contactez-moi par n'importe quel canal.",
   },
   ctaEmail: { en: 'TRANSMIT EMAIL', es: 'ENVIAR CORREO', fr: 'TRANSMETTRE UN EMAIL' },
   ctaLinkedin: { en: 'LINKEDIN', es: 'LINKEDIN', fr: 'LINKEDIN' },

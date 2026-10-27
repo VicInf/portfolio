@@ -28,9 +28,9 @@ export const PROJECTS: readonly Project[] = [
     id: '01',
     title: 'Sidney',
     description: {
-      en: 'Real-time fleet operations platform for a major oil & gas client — under my lead. Flutter client and driver apps plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal — mapping API costs down 38%.',
-      es: 'Plataforma de operaciones de flota en tiempo real para un gran cliente de petróleo y gas — bajo mi dirección. Apps Flutter de clientes y conductores más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal — costos de API de mapas reducidos un 38%.',
-      fr: 'Plateforme d\'opérations de flotte en temps réel pour un grand client du secteur pétrolier — sous ma direction. Applications Flutter client et chauffeurs plus le backend d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal — coûts d\'API de cartographie réduits de 38%.',
+      en: 'Real-time fleet operations platform for Chevron — under my lead. Flutter client and driver apps plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal — mapping API costs down 38%.',
+      es: 'Plataforma de operaciones de flota en tiempo real para Chevron — bajo mi dirección. Apps Flutter de clientes y conductores más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal — costos de API de mapas reducidos un 38%.',
+      fr: 'Plateforme d\'opérations de flotte en temps réel pour Chevron — sous ma direction. Applications Flutter client et chauffeurs plus le backend d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal — coûts d\'API de cartographie réduits de 38%.',
     },
     tags: ['Flutter', 'Firebase', 'Google Maps', 'Hive'],
     links: [
