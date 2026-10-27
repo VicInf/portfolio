@@ -17,7 +17,7 @@ describe('I18n', () => {
     service.set('es');
     expect(service.t('h1a')).toBe('LÍDER FULL-STACK');
     expect(document.documentElement.lang).toBe('es');
-    expect(document.title).toBe('Vicente Pérez — Desarrollador Full-Stack');
+    expect(document.title).toBe('Vicente Pérez — Líder Full-Stack');
 
     service.set('fr');
     expect(service.t('subtitle')).toContain('e-learning');

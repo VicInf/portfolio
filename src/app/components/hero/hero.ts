@@ -13,7 +13,7 @@ export class Hero {
   protected readonly stats = [
     { key: 'statFleet', valueKey: 'statFleetVal' },
     { key: 'statTrips', valueKey: 'statTripsVal' },
-    { key: 'statShipped', valueKey: 'statShippedVal' },
     { key: 'statExp', valueKey: 'statExpVal' },
+    { key: 'statShipped', valueKey: 'statShippedVal' },
   ] as const;
 }

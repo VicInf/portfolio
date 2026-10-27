@@ -17,9 +17,10 @@ describe('Hero', () => {
     return fixture;
   }
 
-  it('positions with the CV summary, not designer copy', () => {
+  it('hooks with the concrete story, not the CV summary', () => {
     const el = create().nativeElement as HTMLElement;
-    expect(el.textContent).toContain('Seeking remote roles with US-based teams');
+    expect(el.textContent).toContain('contractor serving Chevron');
+    expect(el.textContent).not.toContain('Seeking remote roles');
     expect(el.textContent).not.toContain('Every pixel deliberate');
   });
 

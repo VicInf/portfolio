@@ -7,9 +7,9 @@ export type DictKey = keyof typeof D;
 /** Main dictionary: every hardcoded string in the UI, per language. */
 const D = {
   docTitle: {
-    en: 'Vicente Pérez — Full-Stack Developer',
-    es: 'Vicente Pérez — Desarrollador Full-Stack',
-    fr: 'Vicente Pérez — Développeur Full-Stack',
+    en: 'Vicente Pérez — Full-Stack Lead',
+    es: 'Vicente Pérez — Líder Full-Stack',
+    fr: 'Vicente Pérez — Lead Full-Stack',
   },
   navWork: { en: 'WORK', es: 'TRABAJOS', fr: 'PROJETS' },
   navAbout: { en: 'ABOUT', es: 'PERFIL', fr: 'PROFIL' },
@@ -24,9 +24,9 @@ const D = {
   h1a: { en: 'FULL-STACK LEAD', es: 'LÍDER FULL-STACK', fr: 'LEAD FULL-STACK' },
   h1b: { en: 'ONLINE', es: 'EN LÍNEA', fr: 'EN LIGNE' },
   subtitle: {
-    en: 'Senior full-stack developer and project lead with 3+ years owning enterprise systems end to end — Flutter, Angular and NestJS — for clients in oil & gas, insurance and e-learning. Seeking remote roles with US-based teams.',
-    es: 'Desarrollador full-stack senior y líder de proyecto con más de 3 años construyendo sistemas empresariales de extremo a extremo — Flutter, Angular y NestJS — para clientes de petróleo y gas, seguros y e-learning. Busco roles remotos con equipos de EE.UU.',
-    fr: 'Développeur full-stack senior et project lead avec plus de 3 ans à construire des systèmes d\'entreprise de bout en bout — Flutter, Angular et NestJS — pour des clients du pétrole et du gaz, de l\'assurance et de l\'e-learning. Je cherche des rôles remote avec des équipes aux États-Unis.',
+    en: 'I lead a team of two building the real-time fleet platform for a contractor serving Chevron — Flutter, Angular and NestJS across mobile, web and API.',
+    es: 'Lidero un equipo de dos construyendo la plataforma de flota en tiempo real de un contratista que presta servicios a Chevron — Flutter, Angular y NestJS en móvil, web y API.',
+    fr: 'Je dirige une équipe de deux sur la plateforme de flotte en temps réel d\'un sous-traitant au service de Chevron — Flutter, Angular et NestJS sur mobile, web et API.',
   },
   statFleet: { en: 'FLEET', es: 'FLOTA', fr: 'FLOTTE' },
   statTrips: { en: 'TRIPS', es: 'VIAJES', fr: 'TRAJETS' },
@@ -60,7 +60,7 @@ const D = {
   contactText: {
     en: 'Available as USD contractor — US Eastern hours. Reach out through any channel.',
     es: 'Disponible como contratista en USD — horario del Este (EE.UU.). Escríbeme por cualquier canal.',
-    fr: 'Disponible en tant que contractant en USD — fuseau horaire de la côte Est des États-Unis. Contactez-moi par n\'importe quel canal.',
+    fr: 'Disponible comme prestataire en USD — fuseau horaire de la côte Est des États-Unis. Contactez-moi par n\'importe quel canal.',
   },
   ctaEmail: { en: 'TRANSMIT EMAIL', es: 'ENVIAR CORREO', fr: 'TRANSMETTRE UN EMAIL' },
   ctaLinkedin: { en: 'LINKEDIN', es: 'LINKEDIN', fr: 'LINKEDIN' },
