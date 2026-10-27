@@ -30,10 +30,14 @@
   --space-32: 8rem;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  /* Rendered header height: 51px on both breakpoints (measured); token keeps
+     scroll offsets and hero sizing in sync with one source of truth. */
+  --header-h: 3.1875rem;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+/* scroll-padding anchors in-page jumps below the sticky header */
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + var(--space-4)); -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   margin: 0;

@@ -43,6 +43,8 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "outputMode": "static",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -57,6 +59,9 @@
           },
           "configurations": {
             "production": {
+              "prerender": {
+                "routesFile": "prerender-routes.txt"
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -90,6 +95,13 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "tsconfig.spec.json",
+            "buildTarget": "portfolio:build:development"
+          }
         }
       }
     }

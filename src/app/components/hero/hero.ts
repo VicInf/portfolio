@@ -11,8 +11,9 @@ export class Hero {
   protected readonly i18n = inject(I18n);
 
   protected readonly stats = [
-    { key: 'statClass', valueKey: 'statClassVal' },
-    { key: 'statLevel', valueKey: 'statLevelVal' },
+    { key: 'statFleet', valueKey: 'statFleetVal' },
+    { key: 'statTrips', valueKey: 'statTripsVal' },
+    { key: 'statShipped', valueKey: 'statShippedVal' },
     { key: 'statExp', valueKey: 'statExpVal' },
   ] as const;
 }

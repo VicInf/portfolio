@@ -23,8 +23,8 @@
 .play-details[open] summary { color: var(--accent-cyan); border-color: var(--accent-cyan); }
 .play-details summary { list-style: none; cursor: pointer; }
 .play-details summary::-webkit-details-marker { display: none; }
-.play-menu { position: absolute; top: calc(100% + var(--space-2)); right: 0; min-width: 11rem; display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-2); background: var(--bg-elev); border: 1px solid var(--accent-cyan); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); box-shadow: 0 8px 30px rgba(5, 5, 16, 0.6); z-index: 2; opacity: 0; transform: translateY(-4px); pointer-events: none; transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out); }
-.play-details[open] .play-menu { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.play-menu { position: absolute; top: calc(100% + var(--space-2)); right: 0; min-width: 11rem; display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-2); background: var(--bg-elev); border: 1px solid var(--accent-cyan); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); box-shadow: 0 8px 30px rgba(5, 5, 16, 0.6); z-index: 2; opacity: 0; transform: translateY(-4px); pointer-events: none; visibility: hidden; transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out), visibility 0s linear 160ms; }
+.play-details[open] .play-menu { opacity: 1; transform: translateY(0); pointer-events: auto; visibility: visible; transition-delay: 0s; }
 .play-menu a { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) var(--space-3); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); transition: color 160ms var(--ease-out), background-color 160ms var(--ease-out); }
 .play-menu a span { font-size: 0.5rem; color: var(--accent-cyan); }
 .play-menu a:hover { color: var(--text); background: rgba(77, 123, 255, 0.15); }

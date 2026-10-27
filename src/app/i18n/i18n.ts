@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { ApplicationRef, Injectable, inject, signal } from '@angular/core';
 
 export type Lang = 'en' | 'es' | 'fr';
 
@@ -17,48 +17,50 @@ const D = {
   navToggle: { en: 'Toggle menu', es: 'Abrir/cerrar menú', fr: 'Ouvrir/fermer le menu' },
 
   eyebrow: {
-    en: 'FULL-STACK DEVELOPER',
-    es: 'DESARROLLADOR FULL-STACK',
-    fr: 'DÉVELOPPEUR FULL-STACK',
+    en: 'ENTERPRISE SYSTEMS',
+    es: 'SISTEMAS EMPRESARIALES',
+    fr: 'SYSTÈMES D\'ENTREPRISE',
   },
-  h1a: { en: 'CODE OPERATOR', es: 'OPERADOR DE CÓDIGO', fr: 'OPÉRATEUR DE CODE' },
+  h1a: { en: 'FULL-STACK LEAD', es: 'LÍDER FULL-STACK', fr: 'LEAD FULL-STACK' },
   h1b: { en: 'ONLINE', es: 'EN LÍNEA', fr: 'EN LIGNE' },
   subtitle: {
-    en: 'Specialized in crafting high-performance interfaces with precision timing. Every interaction calculated. Every pixel deliberate. Now building the systems behind them.',
-    es: 'Especializado en construir interfaces de alto rendimiento con precisión. Cada interacción calculada. Cada píxel deliberado. Ahora construyendo los sistemas que hay detrás.',
-    fr: "Spécialisé dans la création d'interfaces performantes avec une précision millimétrée. Chaque interaction calculée. Chaque pixel délibéré. Aujourd'hui, je construis les systèmes qui les font tourner.",
+    en: 'Senior full-stack developer and project lead with 3+ years owning enterprise systems end to end — Flutter, Angular and NestJS — for clients in oil & gas, insurance and e-learning. Seeking remote roles with US-based teams.',
+    es: 'Desarrollador full-stack senior y líder de proyecto con más de 3 años construyendo sistemas empresariales de extremo a extremo — Flutter, Angular y NestJS — para clientes de petróleo y gas, seguros y e-learning. Busco roles remotos con equipos de EE.UU.',
+    fr: 'Développeur full-stack senior et project lead avec plus de 3 ans à construire des systèmes d\'entreprise de bout en bout — Flutter, Angular et NestJS — pour des clients du pétrole et du gaz, de l\'assurance et de l\'e-learning. Je cherche des rôles remote avec des équipes aux États-Unis.',
   },
-  statClass: { en: 'CLASS', es: 'CLASE', fr: 'CLASSE' },
-  statLevel: { en: 'LEVEL', es: 'NIVEL', fr: 'NIVEAU' },
+  statFleet: { en: 'FLEET', es: 'FLOTA', fr: 'FLOTTE' },
+  statTrips: { en: 'TRIPS', es: 'VIAJES', fr: 'TRAJETS' },
+  statShipped: { en: 'SHIPPED', es: 'ENVIADO', fr: 'LIVRÉ' },
+  statFleetVal: { en: '300 VEHICLES', es: '300 VEHÍCULOS', fr: '300 VÉHICULES' },
+  statTripsVal: { en: '10K+ / MONTH', es: '10K+ / MES', fr: '10K+ / MOIS' },
+  statShippedVal: { en: '10K+ INSTALLS', es: '10K+ INSTALACIONES', fr: '10K+ INSTALLATIONS' },
   statExp: { en: 'EXP', es: 'EXP', fr: 'EXP' },
-  statClassVal: { en: 'FLUTTER + ANGULAR', es: 'FLUTTER + ANGULAR', fr: 'FLUTTER + ANGULAR' },
-  statLevelVal: { en: 'SENIOR', es: 'SENIOR', fr: 'SENIOR' },
   statExpVal: { en: '3+ YRS', es: '3+ AÑOS', fr: '3+ ANS' },
   ctaPrimary: { en: 'EXECUTE MISSION', es: 'EJECUTAR MISIÓN', fr: 'EXÉCUTER LA MISSION' },
-  ctaSecondary: { en: 'LOAD DATA', es: 'CARGAR DATOS', fr: 'CHARGER LES DONNÉES' },
+  ctaCv: { en: 'DOWNLOAD CV', es: 'DESCARGAR CV', fr: 'TÉLÉCHARGER CV' },
 
   workTitle: { en: 'COMPLETED MISSIONS', es: 'MISIONES COMPLETADAS', fr: 'MISSIONS ACCOMPLIES' },
-  menuAria: { en: 'View apps on Google Play', es: 'Ver apps en Google Play', fr: 'Voir les apps sur Google Play' },
+  menuAria: { en: 'Open app links menu', es: 'Abrir menú de enlaces a las apps', fr: 'Ouvrir le menu des liens vers les apps' },
 
   skillsTitle: { en: 'SKILLS', es: 'HABILIDADES', fr: 'COMPÉTENCES' },
   aboutTitle: { en: 'CHARACTER STATUS', es: 'ESTADO DEL PERSONAJE', fr: 'ÉTAT DU PERSONNAGE' },
   profileTitle: { en: 'PROFILE', es: 'PERFIL', fr: 'PROFIL' },
   profileLead: {
-    en: 'Project Lead and senior full-stack developer with over 3 years of experience bridging technical architecture with project execution — currently leading a team of two engineers across mobile, web and backend.',
-    es: 'Project Lead y desarrollador full-stack senior con más de 3 años de experiencia uniendo arquitectura técnica con ejecución de proyectos — actualmente dirigiendo un equipo de dos ingenieros en móvil, web y backend.',
-    fr: 'Project Lead et développeur full-stack senior avec plus de 3 ans d\'expérience reliant l\'architecture technique à l\'exécution des projets — actuellement à la tête d\'une équipe de deux ingénieurs sur mobile, web et backend.',
+    en: 'Currently leading a team of two across mobile, web and backend — from a real-time fleet platform to a commercial transactions monorepo — with consumer apps live on Google Play.',
+    es: 'Actualmente al frente de un equipo de dos en móvil, web y backend — de una plataforma de flota en tiempo real a un monorepo de transacciones comerciales — con apps de consumo publicadas en Google Play.',
+    fr: 'Actuellement à la tête d\'une équipe de deux sur mobile, web et backend — d\'une plateforme de flotte en temps réel à un monorepo de transactions commerciales — avec des applications grand public publiées sur Google Play.',
   },
   profileLang: {
-    en: 'Languages: native Spanish, bilingual English (UNIMET-certified), French B2 (DELF-certified), currently learning Japanese.',
-    es: 'Idiomas: español nativo, inglés bilingüe (certificación UNIMET), francés B2 (certificación DELF), aprendiendo japonés.',
-    fr: 'Langues : espagnol natif, anglais bilingue (certifié UNIMET), français B2 (certifié DELF), japonais en cours d\'apprentissage.',
+    en: 'Languages: native Spanish, English C2 (UNIMET-certified), French B2 (DELF-certified), currently learning Japanese.',
+    es: 'Idiomas: español nativo, inglés C2 (certificación UNIMET), francés B2 (certificación DELF), aprendiendo japonés.',
+    fr: 'Langues : espagnol natif, anglais C2 (certifié UNIMET), français B2 (certifié DELF), japonais en cours d\'apprentissage.',
   },
 
   contactTitle: { en: 'COMMUNICATION CHANNEL', es: 'CANAL DE COMUNICACIÓN', fr: 'CANAL DE COMMUNICATION' },
   contactText: {
-    en: 'Open to remote roles — USD contractor, full US timezone overlap. Reach out through any channel.',
-    es: 'Abierto a roles remotos — contratista en USD, huso horario EE.UU. completo. Escríbeme por cualquier canal.',
-    fr: "Ouvert aux rôles à distance — freelance en USD, fuseau horaire des États-Unis. Contactez-moi par n'importe quel canal.",
+    en: 'Available as USD contractor — US Eastern hours. Reach out through any channel.',
+    es: 'Disponible como contratista en USD — horario del Este (EE.UU.). Escríbeme por cualquier canal.',
+    fr: 'Disponible en tant que contractant en USD — fuseau horaire de la côte Est des États-Unis. Contactez-moi par n\'importe quel canal.',
   },
   ctaEmail: { en: 'TRANSMIT EMAIL', es: 'ENVIAR CORREO', fr: 'TRANSMETTRE UN EMAIL' },
   ctaLinkedin: { en: 'LINKEDIN', es: 'LINKEDIN', fr: 'LINKEDIN' },
@@ -109,16 +111,23 @@ export class I18n {
   readonly langs: readonly Lang[] = ['en', 'es', 'fr'];
 
   constructor() {
-    let L: Lang | null = null;
+    const preferred = this.readPreferred();
+    // First render must match the prerendered (EN) DOM or hydration mismatches.
+    this.set('en');
+    if (preferred !== 'en') {
+      // Apply the visitor's language once hydration has completed.
+      void inject(ApplicationRef).whenStable().then(() => this.set(preferred));
+    }
+  }
+
+  /** Stored preference wins over the browser language; server always gets EN. */
+  private readPreferred(): Lang {
     try {
       const stored = localStorage.getItem('portfolio-lang');
-      if (stored === 'es' || stored === 'fr' || stored === 'en') L = stored;
-    } catch { /* storage unavailable — default EN */ }
-    if (!L) {
-      const nav = typeof navigator !== 'undefined' ? navigator.language.slice(0, 2) : 'en';
-      L = nav === 'es' ? 'es' : nav === 'fr' ? 'fr' : 'en';
-    }
-    this.set(L);
+      if (stored === 'es' || stored === 'fr' || stored === 'en') return stored;
+    } catch { /* storage unavailable — fall through to navigator */ }
+    const nav = typeof navigator !== 'undefined' ? navigator.language.slice(0, 2) : 'en';
+    return nav === 'es' ? 'es' : nav === 'fr' ? 'fr' : 'en';
   }
 
   set(l: Lang) {
@@ -145,5 +154,11 @@ export class I18n {
   /** Skills chip display name per language (EN source key). */
   txSkill(source: string): string {
     return SKILLS_TX[this.lang()][source] ?? source;
+  }
+
+  /** CV download picks the language the visitor is reading. */
+  cvHref(): string {
+    const file = { en: 'cv-vicente-perez-en.pdf', es: 'cv-vicente-perez-es.pdf', fr: 'cv-vicente-perez-fr.pdf' };
+    return file[this.lang()];
   }
 }

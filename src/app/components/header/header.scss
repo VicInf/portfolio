@@ -1,8 +1,10 @@
-:host { display: block; }
+:host { display: block; position: sticky; top: 0; z-index: 30; }
 
-/* Sticky (in-flow) — the header's own height is always honored by the page
-   flow; no magic padding-top offsets to drift out of sync on any width. */
-header { position: sticky; top: 0; z-index: 30; background: linear-gradient(180deg, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 100%); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+/* Sticky lives on :host — the header element's own parent (this host) is only
+   as tall as the header, and a sticky element can never move inside a parent
+   with no extra height. The host's containing block is app-root (full page),
+   so the bar actually pins. No magic padding-top offsets on any width. */
+header { background: linear-gradient(180deg, rgba(5, 5, 16, 0.95) 0%, rgba(5, 5, 16, 0.7) 100%); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
 
 nav { max-width: 1400px; margin: 0 auto; padding: var(--space-2) clamp(var(--space-3), 5vw, var(--space-8)); padding-left: max(clamp(var(--space-3), 5vw, var(--space-8)), env(safe-area-inset-left)); padding-right: max(clamp(var(--space-3), 5vw, var(--space-8)), env(safe-area-inset-right)); display: flex; align-items: center; gap: var(--space-5); }
 
@@ -47,8 +49,10 @@ header.open .nav-toggle .bars span:nth-child(3) { transform: translateY(-5.5px) 
   .nav-toggle { display: inline-flex; }
   .nav-links, .lang-switch { margin-left: 0; }
 
-  .menu-panel { display: flex; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4) max(var(--space-4), env(safe-area-inset-bottom)); background: rgba(5, 5, 16, 0.96); border-bottom: 1px solid var(--border); opacity: 0; transform: translateY(-6px); pointer-events: none; transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out); }
-  header.open .menu-panel { opacity: 1; transform: none; pointer-events: auto; }
+  .menu-panel { display: flex; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4) max(var(--space-4), env(safe-area-inset-bottom)); background: rgba(5, 5, 16, 0.96); border-bottom: 1px solid var(--border); opacity: 0; transform: translateY(-6px); pointer-events: none; visibility: hidden; transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out), visibility 0s linear 180ms; }
+  /* visibility flips at transition end when closing (fade survives) and
+     immediately when opening — keeps the panel out of the a11y tree when shut */
+  header.open .menu-panel { opacity: 1; transform: none; pointer-events: auto; visibility: visible; transition-delay: 0s; }
 
   .nav-links { flex-direction: column; align-items: center; gap: var(--space-1); width: 100%; margin: 0; }
   .nav-link { font-size: 0.8125rem; padding: var(--space-2) var(--space-4); }

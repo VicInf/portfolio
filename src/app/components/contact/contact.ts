@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { I18n } from '../../i18n/i18n';
 
 @Component({
@@ -10,9 +10,11 @@ import { I18n } from '../../i18n/i18n';
 export class Contact {
   protected readonly i18n = inject(I18n);
 
-  protected readonly channels = [
+  /** The CV channel follows the visitor's language; the rest are fixed. */
+  protected readonly channels = computed(() => [
     { key: 'ctaEmail', href: 'mailto:vicenteapv1@gmail.com', secondary: false },
     { key: 'ctaLinkedin', href: 'https://www.linkedin.com/in/vicinf', secondary: true },
     { key: 'ctaGithub', href: 'https://github.com/VicInf', secondary: true },
-  ] as const;
+    { key: 'ctaCv', href: this.i18n.cvHref(), secondary: true },
+  ] as const);
 }

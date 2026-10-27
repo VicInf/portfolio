@@ -1,0 +1,73 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Unit tests (Vitest)
+        run: pnpm exec ng test --watch=false
+
+      - name: Production build (prerendered)
+        run: pnpm exec ng build --configuration production --base-href=/portfolio/
+
+  deploy:
+    needs: test-and-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Production build (prerendered)
+        run: pnpm exec ng build --configuration production --base-href=/portfolio/
+
+      - name: Publish to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git worktree add deploy origin/gh-pages
+          cd deploy
+          # gh-pages carries only the deployable artifacts — same whitelist as the manual recipe
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp ../dist/portfolio/browser/index.html .
+          cp ../dist/portfolio/browser/main-*.js .
+          cp ../dist/portfolio/browser/styles-*.css .
+          cp ../dist/portfolio/browser/favicon.svg .
+          cp ../dist/portfolio/browser/og-image.png .
+          cp ../dist/portfolio/browser/cv-*.pdf .
+          cp ../dist/portfolio/browser/robots.txt .
+          cp ../dist/portfolio/browser/sitemap.xml .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+          else
+            git commit -m "deploy: $GITHUB_SHA"
+            git push origin HEAD:gh-pages
+          fi

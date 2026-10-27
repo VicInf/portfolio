@@ -28,9 +28,9 @@ export const PROJECTS: readonly Project[] = [
     id: '01',
     title: 'Sidney',
     description: {
-      en: 'Real-time fleet operations platform for Chevron — under my lead. Flutter client and driver apps plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal — mapping API costs down 38%.',
-      es: 'Plataforma de operaciones de flota en tiempo real para Chevron — bajo mi dirección. Apps Flutter de clientes y conductores más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal — costos de API de mapas reducidos un 38%.',
-      fr: 'Plateforme d\'opérations de flotte en temps réel pour Chevron — sous ma direction. Applications Flutter client et chauffeurs plus le backend d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal — coûts d\'API de cartographie réduits de 38%.',
+      en: 'Real-time fleet operations platform for a Venezuelan oil-sector contractor serving Chevron — under my lead. Flutter client and driver apps plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal — mapping API costs down 38%.',
+      es: 'Plataforma de operaciones de flota en tiempo real para un contratista del sector petrolero venezolano que presta servicios a Chevron — bajo mi dirección. Apps Flutter de clientes y conductores más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal — costos de API de mapas reducidos un 38%.',
+      fr: 'Plateforme d\'opérations de flotte en temps réel pour un sous-traitant vénézuélien du secteur pétrolier au service de Chevron — sous ma direction. Applications Flutter client et chauffeurs plus le backend d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal — coûts d\'API de cartographie réduits de 38%.',
     },
     tags: ['Flutter', 'Firebase', 'Google Maps', 'Hive'],
     links: [
@@ -42,11 +42,11 @@ export const PROJECTS: readonly Project[] = [
     id: '02',
     title: 'RiskyID',
     description: {
-      en: 'Identity verification platform — search and validation of individuals and entities. Multi-version Angular migration (13 to 18, today on 21) with standalone components, RxJS state architecture, lazy loading and prerendering: initial load time down 43%. Plus an automated PDF/email reporting engine saving 11 hours weekly.',
-      es: 'Plataforma de verificación de identidad: búsqueda y validación de personas y entidades. Migración Angular en múltiples versiones (de la 13 a la 18, hoy en la 21) con componentes standalone, arquitectura de estado RxJS, lazy loading y prerendering: tiempo de carga inicial un 43% más bajo. Además, un motor de reportes en PDF/correo que ahorra 11 horas semanales.',
-      fr: 'Plateforme de vérification d\'identité : recherche et validation de personnes et d\'entités. Migration d\'Angular sur plusieurs versions (13 à 18, aujourd\'hui 21) avec composants standalone, architecture d\'état RxJS, lazy loading et prerendering : temps de chargement initial réduit de 43%. Un moteur de rapports PDF/e-mail économisant 11 heures par semaine.',
+      en: 'Identity verification platform — search and validation of individuals and entities. Multi-version Angular migration (13 to 18, today on 21) with standalone components, RxJS state architecture, lazy loading and prerendering: initial load time down 43%. Plus an automated PDF/email reporting engine saving ~10 hours weekly.',
+      es: 'Plataforma de verificación de identidad: búsqueda y validación de personas y entidades. Migración Angular en múltiples versiones (de la 13 a la 18, hoy en la 21) con componentes standalone, arquitectura de estado RxJS, lazy loading y prerendering: tiempo de carga inicial un 43% más bajo. Además, un motor de reportes en PDF/correo que ahorra ~10 horas semanales.',
+      fr: 'Plateforme de vérification d\'identité : recherche et validation de personnes et d\'entités. Migration d\'Angular sur plusieurs versions (13 à 18, aujourd\'hui 21) avec composants standalone, architecture d\'état RxJS, lazy loading et prerendering : temps de chargement initial réduit de 43%. Un moteur de rapports PDF/e-mail économisant ~10 heures par semaine.',
     },
-    tags: ['Angular 21', 'RxJS', 'Firebase', 'Cypress'],
+    tags: ['Angular 21', 'RxJS', 'Firebase'],
     links: [{ label: 'Open RiskyID platform', href: 'https://platform.riskyid.com' }],
   },
   {
