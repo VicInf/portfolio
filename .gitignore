@@ -39,6 +39,9 @@ testem.log
 /typings
 __screenshots__/
 
+# CV PDFs are build output of cv/*.html (scripts/cv-build.sh) — deployed from public/
+cv/*.pdf
+
 # System files
 .DS_Store
 Thumbs.db

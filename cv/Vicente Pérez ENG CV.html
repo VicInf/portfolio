@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vicente Pérez — CV</title>
+<style>
+  @page { size: letter; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #16181d; --sub: #4b5563; --faint: #6b7280; --accent: #0e7490; --line: #d8dce2; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.34; padding: 0.45in 0.6in 0.27in; font-variant-ligatures: none; -webkit-font-feature-settings: "liga" 0, "clig" 0, "dlig" 0; }
+  a { color: inherit; text-decoration: none; }
+
+  header { text-align: left; }
+  h1 { font-size: 19.5pt; letter-spacing: 0.02em; font-weight: 700; }
+  .title { font-size: 11pt; color: var(--accent); font-weight: 600; margin-top: 1px; }
+  .contact { margin-top: 5px; font-size: 9pt; color: var(--sub); }
+  .contact span + span::before { content: "  ·  "; color: var(--line); }
+  .availability { margin-top: 3px; font-size: 9pt; color: var(--faint); font-style: italic; }
+
+  section { margin-top: 6px; }
+  h2 { font-size: 10pt; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 1px; margin-bottom: 3px; }
+
+  .summary { color: var(--sub); }
+
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 22px; font-size: 9.5pt; }
+  .skills b { font-weight: 600; }
+  .skills div span { color: var(--sub); }
+
+  .job { margin-bottom: 5px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-title { font-weight: 700; font-size: 10.5pt; }
+  .job-meta { font-size: 9pt; color: var(--faint); white-space: nowrap; }
+  .job-sub { font-size: 9.5pt; color: var(--sub); margin-bottom: 3px; }
+  .job-sub b { color: var(--ink); font-weight: 600; }
+
+  ul { list-style: disc; padding-left: 14px; }
+  li { margin-bottom: 1px; color: var(--sub); }
+  li b { color: var(--ink); font-weight: 600; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Vicente Pérez</h1>
+  <div class="title">Project Lead &amp; Full-Stack Engineer — Flutter · Angular · NestJS</div>
+  <div class="contact">
+    <span>Venezuela (Remote)</span>
+    <span>vicenteapv1@gmail.com</span>
+    <span>linkedin.com/in/vicinf</span>
+    <span>github.com/VicInf</span>
+    <span>vicinf.github.io/portfolio</span>
+  </div>
+  <div class="availability">Available as USD contractor · Works US Eastern hours</div>
+</header>
+
+<section>
+  <h2>Professional Summary</h2>
+  <p class="summary">Project lead and senior full-stack developer. Three years of measurable impact: <b>−38%</b> Google Maps costs (<b>~$800/month</b>), <b>−43%</b> initial load time, <b>~10 hours/week</b> of manual work automated — for enterprise clients in oil &amp; gas, insurance and e-learning.</p>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div><b>Leadership &amp; Delivery:</b> <span>Team leadership, end-to-end ownership, CI/CD pipelines, architecture decisions, code review</span></div>
+    <div><b>Frontend &amp; Mobile:</b> <span>Flutter, Dart, Angular, TypeScript, RxJS</span></div>
+    <div><b>Backend &amp; Data:</b> <span>NestJS, Prisma, PostgreSQL, Firebase (Auth, Firestore, Realtime DB), REST APIs, OpenAPI</span></div>
+    <div><b>Architecture &amp; Quality:</b> <span>Clean Architecture, monorepos, Riverpod, Hive, Flutter unit/widget testing, Google Maps API, OneSignal</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Professional Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title">Project Lead &amp; Senior Developer</span>
+      <span class="job-meta">July 2023 – Present</span>
+    </div>
+    <div class="job-sub"><b>Myservy</b> · Venezuela (Remote)</div>
+    <ul>
+      <li>Led a team of two to architect and deliver <b>Sidney</b>, the real-time fleet platform for a Venezuelan oil-sector contractor serving Chevron — <b>~300 vehicles</b>, <b>10k+ trips monthly</b> — across Flutter client and driver apps, web and the operations backend.</li>
+      <li>Leading development of <b>Fluye</b>, a commercial transactions platform (Angular 22 + NestJS 11 monorepo) — OpenAPI-generated type contracts, Prisma 7 + PostgreSQL, idempotency and transactional outbox patterns — including <b>Service Core</b>, its gateway API for payments, subscriptions and workspace permissions.</li>
+      <li>Shipped <b>Seguros Los Andes</b> (Flutter), a consumer insurance app for vehicle and motorcycle policies with <b>10k+ installs</b> on Google Play.</li>
+      <li>Drove the modernization of a legacy enterprise web app from Angular 13 to 18 (now on 21) — standalone components, RxJS state architecture, lazy loading and prerendering cut initial load time by <b>43%</b>.</li>
+      <li>Cut <b>Google Maps API costs by 38% (~$800/month)</b> by restructuring integrations and data calls during peak fleet operations.</li>
+      <li>Established automated unit/widget testing for the Flutter apps and own the CI/CD pipelines powering mobile and web releases — including an agent-assisted implementation workflow gated by automated tests and mandatory code review.</li>
+      <li>Delivered offline-first <b>Hive</b> synchronization between mobile clients and the backend, eliminating data loss in low-connectivity field conditions; integrated <b>OneSignal</b> push notifications across driver operations.</li>
+      <li>Built an automated PDF/email reporting engine saving operations staff <b>~10 hours weekly</b>; standardized dependency management on pnpm for reproducible installs and faster CI builds.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title">Mobile Developer</span>
+      <span class="job-meta">February 2025 – February 2026 · Part-time, Contract</span>
+    </div>
+    <div class="job-sub"><b>Excuela</b> · Peru (Remote)</div>
+    <ul>
+      <li>Owned <b>Excuela – La Calera</b>, a dedicated fork of the e-learning app (<b>10k+ installs</b> on Google Play), porting features, fixes and core updates from upstream without breaking custom implementations.</li>
+      <li>Led the core state-management migration from <b>Provider to Riverpod</b>, improving modularity and maintainability.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education, Certifications &amp; Languages</h2>
+  <div class="two-col">
+    <div>
+      <p><b>Degree in Systems Engineering</b><br><span style="color: var(--sub);">Universidad Santa María · 2018 – 2024</span></p>
+      <p style="margin-top: 4px;"><b>Diplomado en Ciberdefensa 101 — Cyber Defense</b><br><span style="color: var(--sub);">Universidad Bicentenaria · Bastion 401 · In progress — expected Nov 2026</span></p>
+    </div>
+    <div>
+      <p><b>Languages</b><br><span style="color: var(--sub);">Spanish (native) · English (C2, UNIMET-certified) · French (B2, DELF-certified) · Japanese (beginner)</span></p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -30,7 +30,7 @@ export const PROJECTS: readonly Project[] = [
     description: {
       en: 'Real-time fleet operations platform for a Venezuelan oil-sector contractor serving Chevron — under my lead. Flutter client and driver apps plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal — mapping API costs down 38%.',
       es: 'Plataforma de operaciones de flota en tiempo real para un contratista del sector petrolero venezolano que presta servicios a Chevron — bajo mi dirección. Apps Flutter de clientes y conductores más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal — costos de API de mapas reducidos un 38%.',
-      fr: 'Plateforme d\'opérations de flotte en temps réel pour un sous-traitant vénézuélien du secteur pétrolier au service de Chevron — sous ma direction. Applications Flutter client et chauffeurs plus le backend d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal — coûts d\'API de cartographie réduits de 38%.',
+      fr: 'Plateforme d\'opérations de flotte en temps réel pour un sous-traitant vénézuélien du secteur pétrolier au service de Chevron — sous ma direction. Applications Flutter client et chauffeurs plus le back-end d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal — coûts d\'API de cartographie réduits de 38%.',
     },
     tags: ['Flutter', 'Firebase', 'Google Maps', 'Hive'],
     links: [
@@ -85,8 +85,8 @@ export const PROJECTS: readonly Project[] = [
     title: 'Excuela',
     description: {
       en: 'Maintained and scaled a dedicated fork of the Excuela e-learning app (La Calera) — porting features, fixes and core updates from upstream without breaking custom implementations, and driving the state-management migration from Provider to Riverpod.',
-      es: 'Mantuve y escalé un fork dedicado de la app de e-learning Excuela (La Calera) — portando features, fixes y actualizaciones del upstream sin romper implementaciones propias, y liderando la migración de manejo de estado de Provider a Riverpod.',
-      fr: 'J\'ai maintenu et fait évoluer un fork dédié de l\'appli d\'e-learning Excuela (La Calera) — portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et migration du state management de Provider vers Riverpod.',
+      es: 'Mantuve y escalé un fork dedicado de la app de e-learning Excuela (La Calera) — portando funcionalidades, correcciones y actualizaciones del proyecto original sin romper implementaciones propias, y liderando la migración de manejo de estado de Provider a Riverpod.',
+      fr: 'J\'ai maintenu et fait évoluer un fork dédié de l\'appli d\'e-learning Excuela (La Calera) — portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et migration de la gestion d\'état de Provider vers Riverpod.',
     },
     tags: ['Flutter', 'Riverpod', '10k+ installs'],
     links: [{ label: 'View on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.aprende' }],

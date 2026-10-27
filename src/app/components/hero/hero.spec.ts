@@ -28,7 +28,7 @@ describe('Hero', () => {
     const el = create().nativeElement as HTMLElement;
     const values = [...el.querySelectorAll('.stat-value')].map(n => n.textContent?.trim());
     expect(values).toContain('300 VEHICLES');
-    expect(values).toContain('10K+ INSTALLS');
+    expect(values).toContain('4 APPS');
     expect(values).toContain('3+ YRS');
     expect(values).not.toContain('SENIOR');
   });

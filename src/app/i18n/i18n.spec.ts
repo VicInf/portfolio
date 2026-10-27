@@ -48,4 +48,10 @@ describe('I18n', () => {
     service.set('fr');
     expect(service.cvHref()).toBe('cv-vicente-perez-fr.pdf');
   });
+
+  it('names the CV download after the language being read', () => {
+    expect(service.cvDownload()).toBe('Vicente-Perez-CV-en.pdf');
+    service.set('es');
+    expect(service.cvDownload()).toBe('Vicente-Perez-CV-es.pdf');
+  });
 });

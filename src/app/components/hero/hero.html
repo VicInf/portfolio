@@ -12,7 +12,7 @@
       }
     </div>
     <div class="hero-actions">
-      <a [href]="i18n.cvHref()" download="Vicente-Perez-CV.pdf" class="menu-btn"><span>{{ i18n.t('ctaCv') }}</span></a>
+      <a [href]="i18n.cvHref()" [attr.download]="i18n.cvDownload()" class="menu-btn"><span>{{ i18n.t('ctaCv') }}</span></a>
       <a href="#work" class="menu-btn secondary"><span>{{ i18n.t('ctaPrimary') }}</span></a>
     </div>
   </div>

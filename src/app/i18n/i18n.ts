@@ -33,7 +33,7 @@ const D = {
   statShipped: { en: 'SHIPPED', es: 'ENVIADO', fr: 'LIVRÉ' },
   statFleetVal: { en: '300 VEHICLES', es: '300 VEHÍCULOS', fr: '300 VÉHICULES' },
   statTripsVal: { en: '10K+ / MONTH', es: '10K+ / MES', fr: '10K+ / MOIS' },
-  statShippedVal: { en: '10K+ INSTALLS', es: '10K+ INSTALACIONES', fr: '10K+ INSTALLATIONS' },
+  statShippedVal: { en: '4 APPS', es: '4 APPS', fr: '4 APPS' },
   statExp: { en: 'EXP', es: 'EXP', fr: 'EXP' },
   statExpVal: { en: '3+ YRS', es: '3+ AÑOS', fr: '3+ ANS' },
   ctaPrimary: { en: 'EXECUTE MISSION', es: 'EJECUTAR MISIÓN', fr: 'EXÉCUTER LA MISSION' },
@@ -160,5 +160,10 @@ export class I18n {
   cvHref(): string {
     const file = { en: 'cv-vicente-perez-en.pdf', es: 'cv-vicente-perez-es.pdf', fr: 'cv-vicente-perez-fr.pdf' };
     return file[this.lang()];
+  }
+
+  /** Saved filename carries the language too, so the three PDFs don't collide in Downloads. */
+  cvDownload(): string {
+    return `Vicente-Perez-CV-${this.lang()}.pdf`;
   }
 }
