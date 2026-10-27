@@ -16,6 +16,7 @@
 
 .project-links { grid-area: link; display: flex; gap: var(--space-2); align-items: center; position: relative; z-index: 1; }
 .project-link { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid rgba(255, 255, 255, 0.2); color: var(--text-secondary); clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px)); transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.project-link:active { transform: scale(0.94); }
 
 /* Play-store choice menu — one control, labeled destinations */
 .play-details { position: relative; }
@@ -32,7 +33,23 @@
   .projects-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
 }
 
+/* Mobile: full-width reading column — index and action share a slim header
+   strip, the description breathes across the whole card, tags close it out
+   under a hairline. Desktop row layout is untouched. */
 @media (max-width: 768px) {
-  .project-card { display: flex; flex-direction: column; gap: var(--space-3); }
-  .project-links { align-self: flex-start; }
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "number link"
+      "info   info"
+      "tags   tags";
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .project-number { font-size: 1.25rem; }
+  .project-tags { padding-right: 0; padding-top: var(--space-3); border-top: 1px solid var(--border); }
+  .project-link { width: 40px; height: 40px; }
 }
