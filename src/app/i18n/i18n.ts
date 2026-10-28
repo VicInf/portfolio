@@ -58,9 +58,9 @@ const D = {
 
   contactTitle: { en: 'COMMUNICATION CHANNEL', es: 'CANAL DE COMUNICACIÓN', fr: 'CANAL DE COMMUNICATION' },
   contactText: {
-    en: 'Available as USD contractor — US Eastern hours. Reach out through any channel.',
-    es: 'Disponible como contratista en USD — horario del Este (EE.UU.). Escríbeme por cualquier canal.',
-    fr: 'Disponible comme prestataire en USD — fuseau horaire de la côte Est des États-Unis. Contactez-moi par n\'importe quel canal.',
+    en: 'Open to full-time and contract — USD, US Eastern hours. Reach out through any channel.',
+    es: 'Abierto a full-time y contratos — en USD, horario del Este (EE.UU.). Escríbeme por cualquier canal.',
+    fr: 'Ouvert à un CDI ou des contrats — en USD, fuseau horaire de la côte Est des États-Unis. Contactez-moi par n\'importe quel canal.',
   },
   ctaEmail: { en: 'TRANSMIT EMAIL', es: 'ENVIAR CORREO', fr: 'TRANSMETTRE UN EMAIL' },
   ctaLinkedin: { en: 'LINKEDIN', es: 'LINKEDIN', fr: 'LINKEDIN' },
