@@ -93,14 +93,12 @@ export const SKILLS_TX: Record<Lang, Record<string, string>> = {
     'REST APIs': 'APIs REST',
     'Clean architecture': 'Arquitectura limpia',
     'AI-assisted development': 'Desarrollo asistido por IA',
-    'Agent-driven development': 'Desarrollo dirigido por agentes',
   },
   fr: {
     'Frontend development': 'Développement frontend',
     'REST APIs': 'APIs REST',
     'Clean architecture': 'Architecture propre',
     'AI-assisted development': 'Développement assisté par IA',
-    'Agent-driven development': 'Développement piloté par agents',
   },
 };
 

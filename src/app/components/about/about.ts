@@ -23,6 +23,5 @@ export class About {
     'Prisma',
     'Clean architecture',
     'AI-assisted development',
-    'Agent-driven development',
   ];
 }
