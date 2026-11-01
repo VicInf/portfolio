@@ -7,9 +7,9 @@ export type DictKey = keyof typeof D;
 /** Main dictionary: every hardcoded string in the UI, per language. */
 const D = {
   docTitle: {
-    en: 'Vicente Pérez — Full-Stack Lead',
-    es: 'Vicente Pérez — Líder Full-Stack',
-    fr: 'Vicente Pérez — Lead Full-Stack',
+    en: 'Vicente Pérez · Full-Stack Lead',
+    es: 'Vicente Pérez · Líder Full-Stack',
+    fr: 'Vicente Pérez · Lead Full-Stack',
   },
   navWork: { en: 'WORK', es: 'TRABAJOS', fr: 'PROJETS' },
   navAbout: { en: 'ABOUT', es: 'PERFIL', fr: 'PROFIL' },
@@ -24,9 +24,9 @@ const D = {
   h1a: { en: 'FULL-STACK LEAD', es: 'LÍDER FULL-STACK', fr: 'LEAD FULL-STACK' },
   h1b: { en: 'ONLINE', es: 'EN LÍNEA', fr: 'EN LIGNE' },
   subtitle: {
-    en: 'I lead a team of two building the real-time fleet platform for a contractor serving Chevron — Flutter, Angular and NestJS across mobile, web and API.',
-    es: 'Lidero un equipo de dos construyendo la plataforma de flota en tiempo real de un contratista que presta servicios a Chevron — Flutter, Angular y NestJS en móvil, web y API.',
-    fr: 'Je dirige une équipe de deux sur la plateforme de flotte en temps réel d\'un sous-traitant au service de Chevron — Flutter, Angular et NestJS sur mobile, web et API.',
+    en: 'I lead a team of two building the real-time fleet platform for a contractor serving Chevron: Flutter, Angular and NestJS across mobile, web and API.',
+    es: 'Lidero un equipo de dos construyendo la plataforma de flota en tiempo real de un contratista que presta servicios a Chevron: Flutter, Angular y NestJS en móvil, web y API.',
+    fr: 'Je dirige une équipe de deux sur la plateforme de flotte en temps réel d\'un sous-traitant au service de Chevron : Flutter, Angular et NestJS sur mobile, web et API.',
   },
   statFleet: { en: 'FLEET', es: 'FLOTA', fr: 'FLOTTE' },
   statTrips: { en: 'TRIPS', es: 'VIAJES', fr: 'TRAJETS' },
@@ -46,30 +46,30 @@ const D = {
   aboutTitle: { en: 'CHARACTER STATUS', es: 'ESTADO DEL PERSONAJE', fr: 'ÉTAT DU PERSONNAGE' },
   profileTitle: { en: 'PROFILE', es: 'PERFIL', fr: 'PROFIL' },
   profileLead: {
-    en: 'Currently leading a team of two across mobile, web and backend — from a real-time fleet platform to a commercial transactions monorepo — with consumer apps live on Google Play.',
-    es: 'Actualmente al frente de un equipo de dos en móvil, web y backend — de una plataforma de flota en tiempo real a un monorepo de transacciones comerciales — con apps de consumo publicadas en Google Play.',
-    fr: 'Actuellement à la tête d\'une équipe de deux sur mobile, web et backend — d\'une plateforme de flotte en temps réel à un monorepo de transactions commerciales — avec des applications grand public publiées sur Google Play.',
+    en: 'Currently leading a team of two across mobile, web and backend (from a real-time fleet platform to a commercial transactions monorepo), with consumer apps live on Google Play.',
+    es: 'Actualmente al frente de un equipo de dos en móvil, web y backend (de una plataforma de flota en tiempo real a un monorepo de transacciones comerciales), con apps de consumo publicadas en Google Play.',
+    fr: 'Actuellement à la tête d\'une équipe de deux sur mobile, web et backend (d\'une plateforme de flotte en temps réel à un monorepo de transactions commerciales), avec des applications grand public publiées sur Google Play.',
   },
   profileLang: {
-    en: 'Languages: native Spanish, English C2 (UNIMET-certified), French B2 (DELF-certified), currently learning Japanese.',
-    es: 'Idiomas: español nativo, inglés C2 (certificación UNIMET), francés B2 (certificación DELF), aprendiendo japonés.',
-    fr: 'Langues : espagnol natif, anglais C2 (certifié UNIMET), français B2 (certifié DELF), japonais en cours d\'apprentissage.',
+    en: 'Languages: native Spanish, English C2 (EF SET-certified), French B2 (DELF-certified), currently learning Japanese.',
+    es: 'Idiomas: español nativo, inglés C2 (certificación EF SET), francés B2 (certificación DELF), aprendiendo japonés.',
+    fr: 'Langues : espagnol natif, anglais C2 (certifié EF SET), français B2 (certifié DELF), japonais en cours d\'apprentissage.',
   },
 
   contactTitle: { en: 'COMMUNICATION CHANNEL', es: 'CANAL DE COMUNICACIÓN', fr: 'CANAL DE COMMUNICATION' },
   contactText: {
-    en: 'Open to full-time and contract — USD, US Eastern hours. Reach out through any channel.',
-    es: 'Abierto a full-time y contratos — en USD, horario del Este (EE.UU.). Escríbeme por cualquier canal.',
-    fr: 'Ouvert à un CDI ou des contrats — en USD, fuseau horaire de la côte Est des États-Unis. Contactez-moi par n\'importe quel canal.',
+    en: 'Open to full-time and contract (USD, US Eastern hours). Reach out through any channel.',
+    es: 'Abierto a full-time y contratos: en USD, horario del Este (EE.UU.). Escríbeme por cualquier canal.',
+    fr: 'Ouvert à un CDI ou des contrats (en USD, fuseau horaire de la côte Est des États-Unis). Contactez-moi par n\'importe quel canal.',
   },
   ctaEmail: { en: 'TRANSMIT EMAIL', es: 'ENVIAR CORREO', fr: 'TRANSMETTRE UN EMAIL' },
   ctaLinkedin: { en: 'LINKEDIN', es: 'LINKEDIN', fr: 'LINKEDIN' },
   ctaGithub: { en: 'GITHUB', es: 'GITHUB', fr: 'GITHUB' },
 
   copyright: {
-    en: '© 2026 Vicente Pérez — all rights reserved',
-    es: '© 2026 Vicente Pérez — todos los derechos reservados',
-    fr: '© 2026 Vicente Pérez — tous droits réservés',
+    en: '© 2026 Vicente Pérez. All rights reserved.',
+    es: '© 2026 Vicente Pérez. Todos los derechos reservados',
+    fr: '© 2026 Vicente Pérez. Tous droits réservés',
   },
 };
 
