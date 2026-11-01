@@ -84,9 +84,9 @@ export const PROJECTS: readonly Project[] = [
     id: '06',
     title: 'Excuela',
     description: {
-      en: 'Maintained and scaled a dedicated fork of the Excuela e-learning app (La Calera), porting features, fixes and core updates from upstream without breaking custom implementations, and driving the state-management migration from Provider to Riverpod.',
-      es: 'Mantuve y escalé un fork dedicado de la app de e-learning Excuela (La Calera), portando funcionalidades, correcciones y actualizaciones del proyecto original sin romper implementaciones propias, y liderando la migración de manejo de estado de Provider a Riverpod.',
-      fr: 'J\'ai maintenu et fait évoluer un fork dédié de l\'appli d\'e-learning Excuela (La Calera), portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et migration de la gestion d\'état de Provider vers Riverpod.',
+      en: 'Maintained and scaled Excuela – La Calera, a dedicated fork of the e-learning app (5k+ installs on Google Play), porting features, fixes and core updates from upstream without breaking custom implementations; led the state-management migration from Provider to Riverpod on the main Excuela app (10k+ installs).',
+      es: 'Mantuve y escalé Excuela – La Calera, un fork dedicado de la app de e-learning (+5 000 instalaciones en Google Play), portando funcionalidades, correcciones y actualizaciones del proyecto original sin romper implementaciones propias, y lideré la migración de manejo de estado de Provider a Riverpod en la app principal de Excuela (+10 000 instalaciones).',
+      fr: 'J\'ai maintenu et fait évoluer Excuela – La Calera, un fork dédié de l\'appli d\'e-learning (plus de 5 000 installations sur Google Play), portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et migration de la gestion d\'état de Provider vers Riverpod sur l\'appli principale Excuela (plus de 10 000 installations).',
     },
     tags: ['Flutter', 'Riverpod', '10k+ installs'],
     links: [{ label: 'View on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.aprende' }],
