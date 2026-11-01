@@ -28,14 +28,16 @@ export const PROJECTS: readonly Project[] = [
     id: '01',
     title: 'Sidney',
     description: {
-      en: 'Real-time fleet operations platform for a Venezuelan oil-sector contractor serving Chevron, under my leadership. Flutter client and driver apps plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal, with mapping API costs down 38%.',
-      es: 'Plataforma de operaciones de flota en tiempo real para un contratista del sector petrolero venezolano que presta servicios a Chevron, bajo mi dirección. Apps Flutter de clientes y conductores más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal, con costos de API de mapas reducidos un 38%.',
-      fr: 'Plateforme d\'opérations de flotte en temps réel pour un sous-traitant vénézuélien du secteur pétrolier au service de Chevron, sous ma direction. Applications Flutter client et chauffeurs plus le back-end d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal, avec des coûts d\'API de cartographie réduits de 38%.',
+      en: 'Real-time fleet operations platform for a Venezuelan oil-sector contractor serving Chevron, under my leadership. Flutter client and driver apps (both on Google Play and the App Store) plus the operations backend, delivered with a two-person team across mobile, web and API. Offline-first Hive sync, live Google Maps tracking and OneSignal, with mapping API costs down 38%.',
+      es: 'Plataforma de operaciones de flota en tiempo real para un contratista del sector petrolero venezolano que presta servicios a Chevron, bajo mi dirección. Apps Flutter de clientes y conductores (ambas en Google Play y el App Store) más el backend de operaciones, entregadas con un equipo de dos personas en móvil, web y API. Sincronización offline-first con Hive, seguimiento en vivo con Google Maps y OneSignal, con costos de API de mapas reducidos un 38%.',
+      fr: 'Plateforme d\'opérations de flotte en temps réel pour un sous-traitant vénézuélien du secteur pétrolier au service de Chevron, sous ma direction. Applications Flutter client et chauffeurs (toutes deux sur Google Play et l\'App Store) plus le back-end d\'opérations, livrées par une équipe de deux personnes sur mobile, web et API. Synchronisation offline-first avec Hive, suivi en direct Google Maps et OneSignal, avec des coûts d\'API de cartographie réduits de 38%.',
     },
     tags: ['Flutter', 'Firebase', 'Google Maps', 'Hive'],
     links: [
       { label: 'Sidney Clientes', href: 'https://play.google.com/store/apps/details?id=com.sinergyz.sidney_client' },
       { label: 'Sidney Drivers', href: 'https://play.google.com/store/apps/details?id=com.sinergyz.sidneydriver' },
+      { label: 'Sidney Cliente (iOS)', href: 'https://apps.apple.com/ve/app/sidney-cliente/id6747777856' },
+      { label: 'Sidney Drivers (iOS)', href: 'https://apps.apple.com/ve/app/sidney-drivers/id6747687378' },
     ],
   },
   {
@@ -84,11 +86,11 @@ export const PROJECTS: readonly Project[] = [
     id: '06',
     title: 'Excuela',
     description: {
-      en: 'Maintained and scaled Excuela – La Calera, a dedicated fork of the e-learning app (5k+ installs on Google Play), porting features, fixes and core updates from upstream without breaking custom implementations; contributed to the state-management migration from Provider to Riverpod on the main Excuela app (10k+ installs).',
-      es: 'Mantuve y escalé Excuela – La Calera, un fork dedicado de la app de e-learning (+5 000 instalaciones en Google Play), portando funcionalidades, correcciones y actualizaciones del proyecto original sin romper implementaciones propias, y colaboré en la migración de manejo de estado de Provider a Riverpod en la app principal de Excuela (+10 000 instalaciones).',
-      fr: 'J\'ai maintenu et fait évoluer Excuela – La Calera, un fork dédié de l\'appli d\'e-learning (plus de 5 000 installations sur Google Play), portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et contribution à la migration de la gestion d\'état de Provider vers Riverpod sur l\'appli principale Excuela (plus de 10 000 installations).',
+      en: 'Maintained and scaled Excuela – La Calera, a dedicated fork of the e-learning app (5k+ installs on Google Play), porting features, fixes and core updates from upstream without breaking custom implementations; contributed to the state-management migration from Provider to Riverpod on the main Excuela app (10k+ installs). Both are also available on the App Store.',
+      es: 'Mantuve y escalé Excuela – La Calera, un fork dedicado de la app de e-learning (+5 000 instalaciones en Google Play), portando funcionalidades, correcciones y actualizaciones del proyecto original sin romper implementaciones propias, y colaboré en la migración de manejo de estado de Provider a Riverpod en la app principal de Excuela (+10 000 instalaciones). Ambas apps también están en el App Store.',
+      fr: 'J\'ai maintenu et fait évoluer Excuela – La Calera, un fork dédié de l\'appli d\'e-learning (plus de 5 000 installations sur Google Play), portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et contribution à la migration de la gestion d\'état de Provider vers Riverpod sur l\'appli principale Excuela (plus de 10 000 installations). Les deux apps sont aussi disponibles sur l\'App Store.',
     },
     tags: ['Flutter', 'Riverpod', '10k+ installs'],
-    links: [{ label: 'Excuela on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.aprende' }, { label: 'La Calera fork on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.calera' }],
+    links: [{ label: 'Excuela on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.aprende' }, { label: 'La Calera fork on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.calera' }, { label: 'Excuela on the App Store', href: 'https://apps.apple.com/ve/app/excuela/id6443979393' }, { label: 'La Calera on the App Store', href: 'https://apps.apple.com/ve/app/excuela-la-calera/id6745837910' }],
   },
 ];
