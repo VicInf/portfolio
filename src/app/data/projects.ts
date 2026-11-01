@@ -91,6 +91,6 @@ export const PROJECTS: readonly Project[] = [
       fr: 'J\'ai maintenu et fait évoluer Excuela – La Calera, un fork dédié de l\'appli d\'e-learning (plus de 5 000 installations sur Google Play), portage des fonctionnalités et correctifs de l\'amont sans casser les implémentations personnalisées, et contribution à la migration de la gestion d\'état de Provider vers Riverpod sur l\'appli principale Excuela (plus de 10 000 installations). Les deux apps sont aussi disponibles sur l\'App Store.',
     },
     tags: ['Flutter', 'Riverpod', '10k+ installs'],
-    links: [{ label: 'Excuela on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.aprende' }, { label: 'La Calera fork on Google Play', href: 'https://play.google.com/store/apps/details?id=com.excuela.calera' }, { label: 'Excuela on the App Store', href: 'https://apps.apple.com/ve/app/excuela/id6443979393' }, { label: 'La Calera on the App Store', href: 'https://apps.apple.com/ve/app/excuela-la-calera/id6745837910' }],
+    links: [{ label: 'Excuela', href: 'https://play.google.com/store/apps/details?id=com.excuela.aprende' }, { label: 'La Calera', href: 'https://play.google.com/store/apps/details?id=com.excuela.calera' }, { label: 'Excuela (iOS)', href: 'https://apps.apple.com/ve/app/excuela/id6443979393' }, { label: 'La Calera (iOS)', href: 'https://apps.apple.com/ve/app/excuela-la-calera/id6745837910' }],
   },
 ];
