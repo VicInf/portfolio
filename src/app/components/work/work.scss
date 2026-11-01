@@ -19,6 +19,10 @@
 .project-link:active { transform: scale(0.94); }
 
 /* Play-store choice menu — one control, labeled destinations */
+/* An open menu must paint above the FOLLOWING cards: every card's content
+   sits at z-index 1 and later DOM wins ties, so a tall menu (4 store links)
+   slides under the next card. Lift only the card whose menu is open. */
+.project-card:has(.play-details[open]) { z-index: 10; }
 .play-details { position: relative; }
 .play-details[open] summary { color: var(--accent-cyan); border-color: var(--accent-cyan); }
 .play-details summary { list-style: none; cursor: pointer; }

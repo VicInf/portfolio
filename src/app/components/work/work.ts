@@ -13,8 +13,9 @@ export class Work {
   protected readonly projects = PROJECTS;
 
   /**
-   * Every link (Sidney: two) renders a dropdown menu label; single-link
-   * cards skip the menu and render one plain arrow.
+   * Multi-link cards (Sidney, Excuela: four stores each) render a dropdown
+   * menu of labeled destinations; single-link cards skip the menu and
+   * render one plain arrow.
    */
   protected hasMenu(project: (typeof PROJECTS)[number]): boolean {
     return (project.links?.length ?? 0) > 1;
