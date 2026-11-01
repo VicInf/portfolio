@@ -51,9 +51,9 @@ const D = {
     fr: 'Actuellement à la tête d\'une équipe de deux sur mobile, web et backend (d\'une plateforme de flotte en temps réel à un monorepo de transactions commerciales), avec des applications grand public publiées sur Google Play.',
   },
   profileLang: {
-    en: 'Languages: native Spanish, English C2 (UNIMET-certified), French B2 (DELF-certified), currently learning Japanese.',
-    es: 'Idiomas: español nativo, inglés C2 (certificación UNIMET), francés B2 (certificación DELF), aprendiendo japonés.',
-    fr: 'Langues : espagnol natif, anglais C2 (certifié UNIMET), français B2 (certifié DELF), japonais en cours d\'apprentissage.',
+    en: 'Languages: native Spanish, English C2 (EF SET-certified), French B2 (DELF-certified), currently learning Japanese.',
+    es: 'Idiomas: español nativo, inglés C2 (certificación EF SET), francés B2 (certificación DELF), aprendiendo japonés.',
+    fr: 'Langues : espagnol natif, anglais C2 (certifié EF SET), français B2 (certifié DELF), japonais en cours d\'apprentissage.',
   },
 
   contactTitle: { en: 'COMMUNICATION CHANNEL', es: 'CANAL DE COMUNICACIÓN', fr: 'CANAL DE COMMUNICATION' },
