@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Vicente Pérez — CV</title>
+<title>Vicente Pérez · CV</title>
 <style>
   @page { size: letter; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,7 +14,7 @@
   h1 { font-size: 19.5pt; letter-spacing: 0.02em; font-weight: 700; }
   .title { font-size: 11pt; color: var(--accent); font-weight: 600; margin-top: 1px; }
   .contact { margin-top: 5px; font-size: 9pt; color: var(--sub); }
-  .contact span + span::before { content: "  ·  "; color: var(--line); }
+  .contact > * + *::before { content: "  ·  "; color: var(--line); }
   .availability { margin-top: 3px; font-size: 9pt; color: var(--faint); font-style: italic; }
 
   section { margin-top: 6px; }
@@ -45,20 +45,20 @@
 
 <header>
   <h1>Vicente Pérez</h1>
-  <div class="title">Project Lead &amp; Full-Stack Engineer — Flutter · Angular · NestJS</div>
+  <div class="title">Project Lead &amp; Full-Stack Engineer · Flutter · Angular · NestJS</div>
   <div class="contact">
     <span>Venezuela (Remote)</span>
-    <span>vicenteapv1@gmail.com</span>
-    <span>linkedin.com/in/vicinf</span>
-    <span>github.com/VicInf</span>
-    <span>vicinf.github.io/portfolio</span>
+    <a href="mailto:vicenteapv1@gmail.com">vicenteapv1@gmail.com</a>
+    <a href="https://www.linkedin.com/in/vicinf">linkedin.com/in/vicinf</a>
+    <a href="https://github.com/VicInf">github.com/VicInf</a>
+    <a href="https://vicinf.github.io/portfolio/">vicinf.github.io/portfolio</a>
   </div>
   <div class="availability">Open to full-time and contract · USD · US Eastern hours</div>
 </header>
 
 <section>
   <h2>Professional Summary</h2>
-  <p class="summary">Project lead and senior full-stack developer. Three years of measurable impact: <b>−38%</b> Google Maps costs (<b>~$800/month</b>), <b>−43%</b> initial load time, <b>~10 hours/week</b> of manual work automated — for enterprise clients in oil &amp; gas, insurance and e-learning.</p>
+  <p class="summary">Project lead and full-stack developer. Three years of measurable impact: <b>−38%</b> Google Maps costs (<b>~$800/month</b>), <b>−43%</b> initial load time, <b>~10 hours/week</b> of manual work automated for enterprise clients in oil &amp; gas, insurance and e-learning.</p>
 </section>
 
 <section>
@@ -81,14 +81,14 @@
     </div>
     <div class="job-sub"><b>Myservy</b> · Venezuela (Remote)</div>
     <ul>
-      <li>Led a team of two to architect and deliver <b>Sidney</b>, the real-time fleet platform for a Venezuelan oil-sector contractor serving Chevron — <b>~300 vehicles</b>, <b>10k+ trips monthly</b> — across Flutter client and driver apps, web and the operations backend.</li>
-      <li>Leading development of <b>Fluye</b>, a commercial transactions platform (Angular 22 + NestJS 11 monorepo) — OpenAPI-generated type contracts, Prisma 7 + PostgreSQL, idempotency and transactional outbox patterns — including <b>Service Core</b>, its gateway API for payments, subscriptions and workspace permissions.</li>
+      <li>Led a team of two (work planning, technical guidance, unblocking) to architect and deliver <b>Sidney</b>, the real-time fleet platform for a Venezuelan oil-sector contractor serving Chevron (<b>~300 vehicles</b>, <b>10k+ trips monthly</b>) across Flutter client and driver apps, web and the operations backend.</li>
+      <li>Leading the build of <b>Fluye</b>, a commercial transactions platform (Angular + NestJS monorepo): designing the system architecture and <b>Service Core</b>, its gateway API for payments, subscriptions and workspace permissions, with typed OpenAPI contracts, and owning the technical documentation.</li>
       <li>Shipped <b>Seguros Los Andes</b> (Flutter), a consumer insurance app for vehicle and motorcycle policies with <b>10k+ installs</b> on Google Play.</li>
-      <li>Drove the modernization of a legacy enterprise web app from Angular 13 to 18 (now on 21) — standalone components, RxJS state architecture, lazy loading and prerendering cut initial load time by <b>43%</b>.</li>
+      <li>Drove the modernization of a legacy enterprise web app from Angular 13 to 18 (now on 21): standalone components, RxJS state architecture, lazy loading and prerendering cut initial load time by <b>43%</b> (Lighthouse).</li>
       <li>Cut <b>Google Maps API costs by 38% (~$800/month)</b> by restructuring integrations and data calls during peak fleet operations.</li>
-      <li>Established automated unit/widget testing for the Flutter apps and own the CI/CD pipelines powering mobile and web releases.</li>
-      <li>Delivered offline-first <b>Hive</b> synchronization between mobile clients and the backend, eliminating data loss in low-connectivity field conditions; integrated <b>OneSignal</b> push notifications across driver operations.</li>
-      <li>Built an automated PDF/email reporting engine saving operations staff <b>~10 hours weekly</b>; standardized dependency management on pnpm for reproducible installs and faster CI builds.</li>
+      <li>Established automated unit/widget testing for the Flutter apps and own the CI/CD pipelines, mobile and web releases and production incident response.</li>
+      <li>Delivered offline-first <b>Hive</b> synchronization between mobile clients and the backend, keeping work flowing in low-connectivity field conditions; integrated <b>OneSignal</b> push notifications across driver operations.</li>
+      <li>Built an automated PDF/email reporting engine saving operations staff <b>~10 hours weekly</b>.</li>
     </ul>
   </div>
 
@@ -99,7 +99,7 @@
     </div>
     <div class="job-sub"><b>Excuela</b> · Peru (Remote)</div>
     <ul>
-      <li>Owned <b>Excuela – La Calera</b>, a dedicated fork of the e-learning app (<b>10k+ installs</b> on Google Play), porting features, fixes and core updates from upstream without breaking custom implementations.</li>
+      <li>Owned <b>Excuela – La Calera</b>, a dedicated fork of the e-learning app (<b>5k+ installs</b> on Google Play), porting features, fixes and core updates from upstream without breaking custom implementations.</li>
       <li>Led the core state-management migration from <b>Provider to Riverpod</b>, improving modularity and maintainability.</li>
     </ul>
   </div>
@@ -110,7 +110,7 @@
   <div class="two-col">
     <div>
       <p><b>Degree in Systems Engineering</b><br><span style="color: var(--sub);">Universidad Santa María · 2018 – 2024</span></p>
-      <p style="margin-top: 4px;"><b>Diplomado en Ciberdefensa 101 — Cyber Defense</b><br><span style="color: var(--sub);">Universidad Bicentenaria · Bastion 401 · In progress — expected Nov 2026</span></p>
+      <p style="margin-top: 4px;"><b>Diplomado en Ciberdefensa 101 (Cyber Defense)</b><br><span style="color: var(--sub);">Universidad Bicentenaria · In progress, expected Nov 2026</span></p>
     </div>
     <div>
       <p><b>Languages</b><br><span style="color: var(--sub);">Spanish (native) · English (C2, UNIMET-certified) · French (B2, DELF-certified) · Japanese (beginner)</span></p>
