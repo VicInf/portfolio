@@ -42,9 +42,9 @@ export const PROJECTS: readonly Project[] = [
     id: '02',
     title: 'RiskyID',
     description: {
-      en: 'Identity verification platform: search and validation of individuals and entities. Multi-version Angular migration (13 to 18, today on 21) with standalone components, RxJS state architecture, lazy loading and prerendering: Lighthouse Performance score up 43%. Plus an automated Node.js reporting engine (PDF/email) saving ~10 hours weekly.',
-      es: 'Plataforma de verificación de identidad: búsqueda y validación de personas y entidades. Migración Angular en múltiples versiones (de la 13 a la 18, hoy en la 21) con componentes standalone, arquitectura de estado RxJS, lazy loading y prerendering: puntaje Performance de Lighthouse un 43% más alto. Además, un motor de reportes en Node.js (PDF/correo) que ahorra ~10 horas semanales.',
-      fr: 'Plateforme de vérification d\'identité : recherche et validation de personnes et d\'entités. Migration d\'Angular sur plusieurs versions (13 à 18, aujourd\'hui 21) avec composants standalone, architecture d\'état RxJS, lazy loading et prerendering : score Performance Lighthouse amélioré de 43%. Un moteur de rapports en Node.js (PDF/e-mail) économisant ~10 heures par semaine.',
+      en: 'Identity verification platform: search and validation of individuals and entities. Drove the front-end modernization: multi-version Angular migration (13 to 18, today on 21) with standalone components, RxJS state architecture, lazy loading and prerendering, improving the Lighthouse Performance score by 43%.',
+      es: 'Plataforma de verificación de identidad: búsqueda y validación de personas y entidades. Impulsé la modernización del front-end: migración Angular en múltiples versiones (de la 13 a la 18, hoy en la 21) con componentes standalone, arquitectura de estado RxJS, lazy loading y prerendering, mejorando el puntaje Performance de Lighthouse en un 43%.',
+      fr: 'Plateforme de vérification d\'identité : recherche et validation de personnes et d\'entités. Modernisation du front-end pilotée : migration d\'Angular sur plusieurs versions (13 à 18, aujourd\'hui 21) avec composants standalone, architecture d\'état RxJS, lazy loading et prerendering, avec un score Performance Lighthouse amélioré de 43%.',
     },
     tags: ['Angular 21', 'RxJS', 'Firebase'],
     links: [{ label: 'Open RiskyID platform', href: 'https://platform.riskyid.com' }],
